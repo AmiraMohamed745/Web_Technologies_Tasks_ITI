@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<style>
+
+p {
+    margin: 16px;
+}    
+
+</style>
+<body>
+
+    <section data-role="page" id="allContacts">
+
+        <header data-role="header">
+            <h1><a href="#createContant" data-role="button" data-icon="plus" data-iconpos="left" data-inline="true">Add</a> Contact List</h1>
+        </header>
+
+        <ul data-role="listview" data-inset="true" data-filter="true">
+            <li><a href="#contactInfo">
+            <img src="woman1.png">
+            <h2>Amira Mohamed</h2>
+            <a href="#contactInfo" data-role="button" data-icon="phone" data-show-label="false">phone</a>
+            </a>
+
+            </li>
+            <li><a href="#">
+            <img src="man1.jpeg">
+            <h2>Ahmed Khaled</h2>
+            <a href="#" data-role="button" data-icon="phone" data-show-label="false">phone</a>
+            </a>
+            </li>
+
+            <li><a href="#">
+            <img src="woman1.png">
+            <h2>Lila Khaled</h2>
+            <a href="" data-role="button" data-icon="phone" data-show-label="false">phone</a>
+            </a>
+            </li>
+
+            <li><a href="#">
+                <img src="man1.jpeg">
+                <h2>Omran Mustafa</h2>
+                <a href="" data-role="button" data-icon="phone" data-show-label="false">phone</a>
+                </a>
+            </li>
+            </ul>
+
+        <footer data-role="footer">
+            <h1>Contact List</h1>
+        </footer>
+
+    </section>
+
+
+    <section data-role="page" id="contactInfo">
+
+        <header data-role="header">
+            <h1><a href="#allContacts" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Back</a> Amira Mohamed</h1>
+        </header>
+
+        <img src="woman1.png">
+
+        <div data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <a href="#dialogForDeletetion" data-role="button" data-iconpos="notext" data-icon="delete" data-theme="w">Delete</a>
+            <a href="#createContant" data-role="button" data-iconpos="notext" data-icon="edit" data-theme="w">Edit</a>
+            <a href="#" data-role="button" data-iconpos="notext" data-icon="phone" data-theme="w">Phone</a>
+        </div>
+
+        <footer data-role="footer">
+            <h1>Contact List</h1>
+        </footer>
+
+    </section>
+
+    <section data-role="page" id="createContant">
+
+        <header data-role="header">
+            <h1><a  href="#contactInfo" data-role="button" data-icon="arrow-l" data-iconpos="left" data-inline="true">Back</a> Create Contant</h1>
+        </header>
+
+        <p style: margin: 35px; >Name: <input type="text" name="text-basic" id="text-basic" value=""></p>
+
+        <p>Phone: <input type="number" name="text-basic" id="text-basic" placeholder= "(202) 555-5555" value=""></p>
+
+        <p>Email: <input type="email" name="text-basic" id="text-basic" value=""></p>
+
+        <form style="margin:16px;">
+            <input  type="checkbox" data-role="flipswitch" name="flip-checkbox-3" id="flip-checkbox-3" data-on-text=" Female " data-off-text=" Male " data-wrapper-class="custom-size-flipswitch">
+        </form>
+
+        <a style="margin:16px;" href="#" data-role="button" data-icon="check" data-iconpos="left" data-inline="true">Save</a>
+        <a href="#allContacts" data-role="button" data-icon="forbidden" data-iconpos="left" data-inline="true">Cancel</a>        
+
+
+        <footer data-role="footer">
+            <h1>Contact List</h1>
+        </footer>
+    </section>
+
+    <section data-role="dialog" id="dialogForDeletetion">
+        <header data-role="header">
+            <h1>Delete Contant?</h1>
+        </header>
+
+        <a style="margin:16px;" href="#contactInfo" data-role="button" data-iconpos="left" data-inline="true">Cancel</a> <a href="#allContacts" data-role="button" data-iconpos="left" data-inline="true">Delete</a>
+
+    </section>
+   
+</body>
+</html>
