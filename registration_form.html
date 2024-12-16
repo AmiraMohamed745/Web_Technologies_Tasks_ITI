@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Registration Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+* {box-sizing: border-box;}  
+
+.header {
+    padding: 1px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.circle {
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #1abc9c;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #1abc9c;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+  margin: 10px auto;
+  display: flex;
+  flex: 1;
+}
+
+input[type=submit]:hover {
+  background-color: transparent;
+  color: black;
+  border: 1px solid #1abc9c;
+}
+
+input[type=reset] {
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 20%;
+  margin: 10px auto;
+  display: flex;
+  flex: 1;
+}
+
+input[type=reset]:hover {
+  background-color: transparent;
+  border: 1px solid red;
+  color: black;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  width: 50%;
+  padding: 20px;
+  margin: 30px auto;
+}
+
+.button-container {
+  display: flex;
+  gap: 20px; 
+  width: 50%;
+  margin: 20px auto;
+  padding: 0px;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Contact Us</h1>
+    </header>
+
+
+<form action="hijaband.html" method="POST">
+    <div class="container"> 
+        <header>
+          <h3><span class="circle">1</span> Account Information</h3>
+        </header>
+
+        <label for="username">Username<span class="required">*</span></label>
+        <input type="text" required id="username" size="25" placeholder="Your username" required>
+
+        <label for="password">Password<span class="required">*</span></label>
+        <input type="text" id="password" size="25" placeholder="*********" required>
+
+        <label for="confirm_password">Confirm Password<span class="required">*</span></label>
+        <input type="text" id="confirm_password" size="25" placeholder="*********" required>
+
+        <label for="credit_card_no">Credit Card NO.<span class="required">*</span></label>
+        <input type="text" id="credit_card_no" maxlength="16" placeholder="xxxx xxxx xxxx xxxx" required>
+</div>
+
+<div class="container"> 
+        <header>
+            <h3><span class="circle">2</span>Personal Information</h3>
+        </header>
+
+        <label for="name">Name<span class="required">*</span></label>
+        <input type="text" id="name" size="25" placeholder="Your name" required>
+
+        <label for="DOB">Date of birth<span class="required">*</span></label>
+        <input type="date" id="DOB" placeholder="mm/dd/yyyy" required>
+        
+        <label for="favcolor">Favorite Color</label>
+        <input type="color" id="favcolor" value="#000000">
+
+        <label for="profile_photo">Profile Photo(s)</label>
+        <input type="file" id="profile_photo" multiple>
+
+        <label for="favbrowser">Favorite Browser</label>
+        <select> 
+        <option value="0">Select a browser</option>
+        <option value="microsoftedge">Microsfot Edge</option>
+        <option value="chrom">Chrome</option>
+        <option value="mozilafirefox">Firefox</option>
+        </select>
+</div>
+
+<div class="container"> 
+  <header>
+      <h3><span class="circle">3</span>Company Information</h3>
+  </header>
+
+  <label for="numemployees">No. of Employees</label>
+  <input type="number" id="numemployees" min="1" max="1000">
+
+  <label for="estimatedrevenue">Estimated Revenue</label>
+  <input type="range" id="estimatedrevenue" min="1" max="1000000000000000">
+
+ </div> 
+
+<div class="container"> 
+  <header>
+      <h3><span class="circle">4</span>Contact Information</h3>
+  </header>
+
+  <label for="email">Email address(es)<span class="required">*</span></label>
+  <input type="email" id="email" required>
+
+  <label for="phonenumber">Phone Number</label>
+  <input type="tel" id="phonenumber" placeholder="01" pattern="^01[0-2,5]\d{8}$" >
+
+  <label for="websiteurl">Website URL</label>
+  <input type="url" id="websiteurl">
+</div> 
+
+<div class="button-container">
+  <input type="submit" id="submit" value="Register">
+  <input type="reset" id="submit" value="Cancel">
+</div>
+
+</form>
+
+
+</body>
+</html>
